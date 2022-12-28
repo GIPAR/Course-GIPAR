@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/explorador.png" type="image/ico" />
+
+    <!-- Bootstrap -->
+    <link href="../../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  
+    <!-- bootstrap-progressbar -->
+    <link href="../../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../../../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../../../build/css/custom.min.css" rel="stylesheet">
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="../../css/new_style.css">
+
+    <title>Understanding the GUI</title>
+
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="../../index.html" class="site_title">
+                <!-- <i class="fa fa-paw"></i>  -->
+                <span>Course</span>
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <!-- <img src="images/img.jpg" alt="..." class="img-circle profile_img"> -->
+              </div>
+              <div class="profile_info">
+                <span>Welcome</span>
+                <!-- <h2>John Doe</h2> -->
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Chapters</h3>
+                <ul class="nav side-menu"> 
+                  <li ><a><i class="fa fa-cube"></i><b>3.2 - </b> Gazebo Basics <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="display: block;">                        
+                      <li class="sub_menu"><a href="01.Introduction.html"><b>3.2.1 - </b>Introduction</a>
+                      </li>
+                      <li><a href="02.What is Gazebo.html"><b>3.2.2 - </b>What is Gazebo?</a>
+                      </li>
+                      <li><a href="03.Gazebo in the Workspace.html"><b>3.2.3 - </b>Gazebo in the Workspace</a>
+                      </li>
+                      <li><a href="04.Gazebo Components.html"><b>3.2.4 - </b>Gazebo Components</a>
+                      </li>
+                      <li><a href="05.Understanding the GUI.html"><b>3.2.5 - </b>Understanding the GUI</a>
+                      </li>
+                      <li><a href="06.Simulating your First Robot.html"><b>3.2.6 - </b>Simulating your First Robot</a>
+                      </li>
+                      <li><a href="07.Writing a Plugin.html"><b>3.2.7 - </b>Writing a Plugin</a>
+                      </li>
+                      <li><a href="08.Exploring the Building Editor.html"><b>3.2.8 - </b>Exploring the Building Editor</a>
+                      </li>
+                      <li><a href="09.Outro.html"><b>3.2.9 - </b>Outro</a>
+                      </li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+            </div>
+            <center>
+              <a href="../../index.html" target="_blank"><button type="button" class="btn btn-outline-warning">Home</button></a> 
+            </center>
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>               
+            </div>
+            <nav class="nav navbar-nav">                
+              <ul class=" navbar-right">
+                <center>
+                  <h4>05. Understanding the GUI</h4>
+                </center> 
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <main class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <!-- <h1 id="understanding-the-gui">Understanding the GUI</h1> -->
+                  </div>
+    
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3><p>Understanding the GUI</p></h3>
+
+                  <iframe width="1050" height="700" frameborder="0" 
+                    src="https://mega.nz/embed/3AFAzJ5R#OlPPWRzr_GXzI5BCrJSAxaDHoCZnon2XJT-du25aoU8" 
+                    allowfullscreen >
+                  </iframe>
+  
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <p>The Gazebo GUI is divided into four major sections:</p>
+                    <ol>
+                      <li>Scene </li>
+                      <li>Side Panel</li>
+                      <li>Toolbars</li>
+                      <li>Menu</li>
+                    </ol>
+                    <h2 id="scene">Scene</h2>
+                    <p>The scene is where you will be spending most of your time, whether creating a simulation or running one. While you can use a trackpad to navigate inside the scene, a mouse is highly recommended.</p>
+                    <p>You can pan the scene by pressing the left mouse button and dragging. If you hold down SHIFT in addition, you can now rotate the view. You can zoom in and out by using the mouse scroll or pressing and dragging the RMB.</p>
+                  </div>  
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <figure class="figure">
+                      <img src="img/gazebo-mouse.png" alt="" class="img img-fluid">
+                      <figcaption class="figure-caption">
+                        
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <h2 id="side-panel">Side Panel</h2>
+                    <p>The side panel on the left consists of three tabs: </p>
+                    <ol>
+                      <li>World</li>
+                      <li>Insert</li>
+                      <li>Layers</li>
+                    </ol>
+                    <h3 id="world"><kbd>World</kbd></h3>
+                    <p>This tab displays the lights and models currently in the scene. By clicking on individual model, you can view or edit its basic parameters like position and orientation. In addition, you can also change the physics of the scene like gravity and magnetic field via the Physics option. The GUI option provides access to the default camera view angle and pose.</p>
+                    <h3 id="insert"><kbd>Insert</kbd></h3>
+                    <p>This is where you will find objects (models) to add to the simulation scene. Left click to expand or collapse a list of models. To place an object in the scene, simply left-click the object of interest under the Insert tab; this will bind the object to your mouse cursor, and now you can place it anywhere in the scene by left-clicking at that location.</p>
+                    <h3 id="layers"><kbd>Layers</kbd></h3>
+                    <p>This is an optional feature, so this tab will be empty in most cases. To learn more about Layers, click <a href="http://gazebosim.org/tutorials?tut=visual_layers&cat=build_robot" rel="noopener noreferrer" target="_blank">here</a>.</p>
+                    <h2 id="top-toolbar">Top Toolbar</h2>
+                    <p>Next, we have a toolbar at the top. It provides quick access to some cursor types, geometric shapes, and views.</p>
+                    <h3 id="select-mode"><kbd>Select mode</kbd></h3>
+                    <p>Select mode is the most commonly used cursor mode. It allows you to navigate the scene.</p>
+                    <h3 id="translate-mode"><kbd>Translate mode</kbd></h3>
+                    <p>One way to change an object's position is to select the object in the world tab on the side panel and then change its pose via properties. This is cumbersome and also unnatural, the translate mode cursor allows you to change the position of any model in the scene. Simply select the cursor mode and then use the proper axis to drag the object to its desired location.</p>
+                    <h3 id="rotate-mode"><kbd>Rotate mode</kbd></h3>
+                    <p>Similar to translate mode, this cursor mode allows you to change the orientation of any given model.</p>
+                    <h3 id="scale-mode"><kbd>Scale mode</kbd></h3>
+                    <p>Scale mode allows you to change the scale, and hence, overall size of any model.</p>
+                    <h3 id="undoredo"><kbd>Undo/Redo</kbd></h3>
+                    <p>Since we humans are best at making mistakes, the undo tool helps us revert our mistakes. On the other hand if you undid something that you did not intend to, the redo tool can come to the rescue. </p>
+                    <h3 id="simple-shapes"><kbd>Simple shapes</kbd></h3>
+                    <p>You can insert basic 3D models like cubes, spheres, or cylinders into the scene.</p>
+                    <h3 id="lights"><kbd>Lights</kbd></h3>
+                    <p>Add different light sources like a spotlight, point light, or directional light to the scene.</p>
+                    <h3 id="copypaste"><kbd>Copy/Paste</kbd></h3>
+                    <p>These tools let you copy/paste models in the scene. On the other hand, you can simply press Ctrl+C to copy and Ctrl+V to paste any model. </p>
+                    <h3 id="align"><kbd>Align</kbd></h3>
+                    <p>This tool allows you to align one model with another along one of the three principal axes.</p>
+                    <h3 id="change-view"><kbd>Change view</kbd></h3>
+                    <p>The change view tool lets you view the scene from different perspectives like top view, side view, front view, bottom view. </p>
+                    <h2 id="bottom-toolbar">Bottom Toolbar</h2>
+                    <p>The Bottom Toolbar has a neat play and pause button. This button allows you to pause the simulation and conveniently move objects around. This toolbar also displays data about the simulation, such as the simulation time, the real time, and the relationship between the two. There is also an frames-per-second counter that can be found to gauge your system's performance for any given scene. </p>
+                  </div>               
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <h2 id="menu">Menu</h2>
+                    <p>The Menu: Some of the menu options are duplicated in the Toolbars or as right-click context menu options in the Scene. If you click on Edit, you can switch to the Building Editor to design building or the Model Editor to build models. We will be working in both of these features in the upcoming concepts. </p>
+                  </div>               
+                </div>
+                <div class="divider"></div>
+                <div class="ud-atom">
+                  <h3></h3>
+                  <div>
+                    <figure class="figure">
+                      <img src="img/menu.png" alt="" class="img img-fluid">
+                      <figcaption class="figure-caption">
+                        
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="divider"></div>
+              </div>
+    
+              <div class="col-12">
+                <p class="text-right">
+                  <a href="06.Simulating your First Robot.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+                </p>
+              </div>
+            </div>
+          </main>
+          <!-- footer content -->
+          <section class="contact-area" id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                  <div class="contact-content text-center">
+                    <a href=""><img src="https://gipar.ifba.edu.br/wp-content/uploads/2022/02/logo-GIPAR-2-e1643985541240-1536x572.png" alt="logo" style="width: 150px;"></a>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p> -->
+                    <div class="hr"></div>
+                    <!-- <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6> -->
+                    <!-- <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6> -->
+                    <div class="contact-social">
+                      <ul class="contacts_footer">
+                        <li><a class="hover-target" href="https://gipar.ifba.edu.br/"target="_blank">               <i class="fa fa-laptop"></i></a></li>
+                        <li><a class="hover-target" href="https://www.instagram.com/giparvca/" target="_blank">     <i class="fa fa-instagram"></i></a></li>
+                        <li><a class="hover-target" href="https://www.youtube.com/@gipar-ifba3478"target="_blank">  <i class="fa fa-youtube"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <hr style="background-color: rgb(151, 146, 146);">
+              <center>
+                <span>Copyright &copy; 2023 GIPAR All Rights Reserved.</span>
+              </center>
+              <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib &emsp;</a>
+              </div>
+            </div>
+          </section>
+          <!-- /footer content -->
+        </div>
+        <!-- /page content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../../../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../../../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../../../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../../../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../../../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../../../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../../../build/js/custom.min.js"></script>
+  
+  </body>
+</html>
+           
