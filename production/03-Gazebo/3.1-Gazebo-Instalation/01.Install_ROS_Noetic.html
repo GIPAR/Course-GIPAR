@@ -30,7 +30,7 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="../../css/new_style.css">
 
-    <title>3.3.4.1 Build My World</title>
+    <title>3.1.1 Install ROS Noetic</title>
     
     <style>
       p, #gazebo-basics-lesson-roadmap, li {
@@ -73,22 +73,14 @@
               <div class="menu_section">
                 <h3>Chapters</h3>
                 <ul class="nav side-menu"> 
-                  <li><a><b>3.3 - </b>Project<span class="fa fa-chevron-down"></span></a>
+                  <li><a><b>3.1 - </b>Gazebo Instalation<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" style="display: block;">
-                      <li><a href="01.Introduction.html"><b>3.3.1 - </b> Introduction</a>
+                      <li><a href="01.Install_ROS_Noetic.html"><b>3.1.1 - </b> Install ROS Noetic</a>
                       </li>
-                      <li><a href="02.Sample Simulation World.html"><b>3.3.2 - </b> Sample Simulation World</a>
-                      </li>
-                      <li><a href="03.Gazebo in the Workspace.html"><b>3.3.3 - </b> Gazebo in the Workspace</a>
-                      </li>
-                      <li><a href="04.Project Cheat Sheet.html"><b>3.3.4 - </b> Project Cheat Sheet</a>
-                      </li>
-                      <li><a href="Project Description - Build My World.html"><b>3.3.4.1 - </b> Project Description: Build My World</a>
-                      </li>
-                      <li><a href="Project Rubric - Build My World.html"><b>3.3.4.2 - </b> Project Rubric: Build My World</a>
+                      <li><a  href="02.Configuration_Models_Gazebo.html"><b>3.1.2 - </b> Configuration Models Gazebo</a>
                       </li>
                     </ul>
-                  </li>    
+                  </li>  
                 </ul>
               </div>
             </div>
@@ -107,7 +99,7 @@
             <nav class="nav navbar-nav">                
               <ul class=" navbar-right">
                 <center>
-                  <h4>05. Project: Build My World</h4>
+                  <h4>01. Install ROS Noetic</h4>
                 </center> 
               </ul>
             </nav>
@@ -136,55 +128,41 @@
       
             <main class="container">
               <div class="row">
-                <div class="col-12">                
-                  <h2 id="summary-of-tasks">Summary of Tasks</h2>
-                  <p>Let’s summarize what you should do in this project to create a simulation world for all your projects in this Robotics Software Engineer Nanodegree Program. </p>
-                  
-                  <ol>
-                    <li>Build a single floor wall structure using the <strong>Building Editor</strong> tool in Gazebo. Apply at least one feature, one color, and optionally one texture to your structure. Make sure there's enough space between the walls for a robot to navigate.  </li>
-                    <li>Model any object of your choice using the <strong>Model Editor</strong> tool in Gazebo. Your model links should be connected with joints. </li>
-                    <li>Import your structure and two instances of your model inside an empty <strong>Gazebo World</strong>.</li>
-                    <li>Import at least one model from the <strong>Gazebo online library</strong> and implement it in your existing Gazebo world. </li>
-                    <li>Write a C++ <strong>World Plugin</strong> to interact with your world. Your code should display “Welcome to <your name>’s World!” message as soon as you launch the Gazebo world file. </li>
-                  </ol>
-      
-                  <p>These tasks are just the basic requirements for you to pass the project! Feel free to have fun designing and importing multiple models. </p>
-                  <h2 id="evaluation">Evaluation</h2>
-                  <p>Once you finish designing your world in Gazebo, check the <a href="https://review.udacity.com/#!/rubrics/2346/view" rel="noopener noreferrer" target="_blank">Project Rubric</a> to see if your world meets the specifications. If so, then you are ready to submit!</p>
-                  <h2 id="submission-folder">Submission Folder</h2>
-                  <p>Here are the files that you need to include in your project submission folder:</p>
-                  
-                  <ul>
-                    <li><strong>model</strong> folder:<ul>
-                    <li>Any object or robot designed in the Model Editor tool of Gazebo</li>
-                    <li>A single floor structure designed in the Building Editor tool of Gazebo</li></ul></li>
-                    <li><strong>world</strong> folder:<ul>
-                    <li>Gazebo world file that includes the models</li></ul></li>
-                    <li><strong>script</strong> folder:<ul>
-                    <li>Gazebo world plugin C++ script</li></ul></li>
-                    <li><strong>CMakeLists.txt</strong> file to link the C++ code to libraries</li>
-                  </ul>
-      
-                  <h2 id="ready-to-submit-your-project">Ready to submit your project?</h2>
-                  <p>Click on the "Submit Project" button and follow the instructions to submit!</p>
-                  <h2 id="project-submission-checklist">Project Submission Checklist</h2>
-                  <p><strong>Before submitting your project, please review and confirm the following items.</strong> <br />
-                  <input type="checkbox"> I am confident all rubric items have been met and my project will pass as submitted. (If not, I will discuss with my mentor prior to submitting.)<br />
-                  <input type="checkbox"> Project builds correctly without errors and runs.<br />
-                  <input type="checkbox"> All required functionality exists and my project behaves as expected per the project's specifications.</p>
-                  <p><strong>Once you have checked all these items, you are ready to submit!</strong></p>
-                </div>
-      
                 <div class="col-12">
-                  <p class="text-right">
-                  </p>
+                  <div class="ud-atom">
+                    <h3></h3>
+                    <div>
+                      <h1 id="simulating-your-first-robot">Install ROS Noetic</h1>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h3></h3>
+                    <div>
+                      <h2 id="create-directories">Here you will learn how to install ROS Noetic on Ubuntu 20.04 LTS</h2>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h2 id="construct-the-robots-chassis">
+                      <li>To install ROS Noetic, follow the steps from an official website: <a target="_blank" href="http://wiki.ros.org/noetic/Installation/Ubuntu">Wiki ROS</a> or you can follow the video below</li>
+                    </h2>
+                    <h3><p>Install</p></h3>
+                    <iframe width="1050" height="700" src="https://www.youtube.com/embed/ZA7u2XPmnlo" 
+                      title="YouTube video player" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>               
+                  <div>
+                    <h2 id="construct-the-robots-chassis">In the next chapter, we will learn how to configure the gazebo models</h2>
+                  </div>   
                 </div>
-      
-                <div class="col-12">
-                  <p class="text-right">
-                    <a href="Project Rubric - Build My World.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
-                  </p>
-                </div>
+              </div>
+              <div class="col-12">
+                <p class="text-right">
+                  <a href="02.Configuration_Models_Gazebo.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+                </p>
               </div>
             </main>            
           </div>
@@ -271,3 +249,4 @@
   
   </body>
 </html>
+    
