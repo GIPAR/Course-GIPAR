@@ -30,7 +30,14 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="../../css/new_style.css">
 
-    <title>Writing a Plugin</title>
+    <title>Sample Simulation World</title>
+    
+    <style>
+      p, #gazebo-basics-lesson-roadmap, li {
+        color: black;
+      }
+    </style>
+    
   </head>
 
   <body class="nav-md">
@@ -41,7 +48,8 @@
             <div class="navbar nav_title" style="border: 0;">
               <a href="../../index.html" class="site_title">
                 <!-- <i class="fa fa-paw"></i>  -->
-                <span>Course</span></a>
+                <span>Course</span>
+              </a>
             </div>
 
             <div class="clearfix"></div>
@@ -105,7 +113,7 @@
             <nav class="nav navbar-nav">                
               <ul class=" navbar-right">
                 <center>
-                  <h4>07. Writing a Plugin</h4>
+                  <h4>02. Sample Simulation World</h4>
                 </center> 
               </ul>
             </nav>
@@ -126,8 +134,6 @@
                         <div></div>
                         <div></div>
                       </button>
-      
-                      <!-- <h1 style="display: inline-block">07. Writing a Plugin</h1> -->
                     </div>
                   </div>
                 </div>
@@ -140,159 +146,76 @@
                   <div class="ud-atom">
                     <h3></h3>
                     <div>
-                      <h1 id="writing-a-plugin">Writing a Plugin</h1>
+                      <h1 id="sample-simulation-world">Sample Simulation World</h1>
                     </div>
-      
-                  </div>
-                  <div class="divider"></div>
-                  <div class="ud-atom">
-                    <h3><p>Writing a Plugin</p></h3>
-                    <iframe width="1050" height="700" frameborder="0" 
-                      src="https://mega.nz/embed/LNVQxJCK#xuiwXiI6kTpklRArUsThkqeWNSDcfyBnYsdFf0oVfCI" 
-                      allowfullscreen >
-                    </iframe> 
+          
                   </div>
                   <div class="divider"></div>
                   <div class="ud-atom">
                     <h3></h3>
                     <div>
-                      <h2 id="simple-steps-to-interact-with-a-world-in-gazebo-through-a-world-plugin">Simple steps to interact with a World in Gazebo through a World plugin</h2>
-                      <h3 id="1--create-a-directory-for-scripts-inside-“myrobot”-to-store-a-hellocpp-file">1- Create a directory for scripts inside “myrobot” to store a <kbd>hello_world.cc</kbd> file</h3>
+                      <p>To help you get started, I’ve included a sample simulation. Reviewing the sample, its aspects, and the directory structure will help you build your own world in Gazebo. Please note that you have only visual access to the sample simulation as it's not provided to you in the Udacity Workspace or anywhere else.</p>
+                      <p>We are providing you with a Udacity Workspace for your project. You can find this Workspace under the headline <strong>Gazebo in the Workspace</strong>. Whenever you feel ready, launch the Workspace, go to desktop, and start the project!</p>
+                      <h2 id="output-image">Output Image</h2>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h3></h3>
+                    <div>
+                      <figure class="figure">
+                      <img src="img/screen-shot-2018-11-12-at-4.20.50-pm-2.png" alt="" class="img img-fluid">
+                      <figcaption class="figure-caption">
                     
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ cd /home/workspace/myrobot  <br>                  
-                        &emsp;$ mkdir script                <br>                   
-                        &emsp;$ cd script                   <br>                    
-                        &emsp;$ $ gedit hello_world.cc      <br>                  
-                        &emsp;
-                      </div>
-
-                      <p>Inside <kbd>hello_world.cc</kbd>, include this code:</p>
-
-                      <div class="gedit">
-                        <center><div class="gedit-title">Bloco de Notas</div></center>
-                        &emsp; #include &lt;gazebo/gazebo.hh&gt;                                                        <br> 
-                        &emsp; &emsp; namespace gazebo{                                                                 <br> 
-                        &emsp; &emsp; &emsp; class WorldPluginMyRobot : public WorldPlugin{                             <br>                                                                         
-                        &emsp; &emsp; &emsp; &emsp; public: WorldPluginMyRobot() : WorldPlugin(){                       <br> 
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  printf("Hello World!\n");                            <br> 
-                        &emsp; &emsp; &emsp; &emsp; &emsp; }                                                            <br> 
-                        &emsp; &emsp; &emsp; &emsp;                                                                     <br> 
-                        &emsp; &emsp; &emsp; &emsp; public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf){  <br>
-                        &emsp; &emsp; &emsp; &emsp; &emsp; }                                                            <br>                                                                            
-                        &emsp; &emsp; &emsp; };                                                                         <br> 
-                        &emsp; &emsp; &emsp; GZ_REGISTER_WORLD_PLUGIN(WorldPluginMyRobot)                               <br> 
-                        &emsp; &emsp; }                                                                                 <br>
-                        &emsp; &emsp; 
-                      </div>
-
-                      <h3 id="2--create-a-cmakeliststxt-file">2- Create a CMakeLists.txt file</h3>
-
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ cd /home/workspace/myrobot <br>                  
-                        &emsp;$ gedit CMakeLists.txt     <br>                                    
-                        &emsp;
-                      </div>
-      
-                      <p>Inside, <kbd>CMakeLists.txt</kbd>, include the following: </p>
-      
-                      <div class="gedit">
-                        <center><div class="gedit-title">Bloco de Notas</div></center>
-                        &emsp; cmake_minimum_required(VERSION 2.8 FATAL_ERROR)                      <br> 
-                        &emsp; &emsp; find_package(gazebo REQUIRED)                                 <br> 
-                        &emsp; &emsp; include_directories(${GAZEBO_INCLUDE_DIRS})                   <br> 
-                        &emsp; &emsp; link_directories(${GAZEBO_LIBRARY_DIRS})                      <br> 
-                        &emsp; &emsp; list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")            <br>
-                        &emsp;                                                                      <br> 
-                        &emsp; &emsp; add_library(hello_world SHARED script/hello_world.cc)         <br> 
-                        &emsp; &emsp; target_link_libraries(hello_world ${GAZEBO_LIBRARIES})        <br>
-                        &emsp; &emsp; set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}") <br>
-                        &emsp; &emsp; 
-                      </div>
-
-                      <h3 id="3--create-a-build-directory-and-compile-the-code">3- Create a build directory and compile the code</h3>
-                      <h6 style="color: red;">Don't forget to replace the <kbd>NAME_USER</kbd> with your <kbd>linux username</kbd></h6>
-                      
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ cd /home/workspace/myrobot <br>                  
-                        &emsp;$ mkdir build     <br>     
-                        &emsp;$ cd build/     <br>
-                        &emsp;$ cmake ../     <br>
-                        &emsp;$ make # You might get errors if your system is not up to date!     <br>   
-                        &emsp;$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/<b style="color: red;">NAME_USER</b>/workspace/myrobot/build     <br>                            
-                        &emsp;
-                      </div>
-      
-                      <h3 id="4--open-your-world-file-and-attach-the-plugin-to-it">4- Open your world file and attach the plugin to it</h3>
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ cd /home/workspace/myrobot/world/ <br>                  
-                        &emsp;$ gedit myworld     <br>                               
-                        &emsp;
-                      </div>
-
-                      <p>Copy this code</p>
-                      
-                      <div class="gedit">
-                        <center><div class="gedit-title">Bloco de Notas</div></center>
-                        &emsp; &lt;plugin name="hello_world" filename="libhello_world.so"/><br>
-                        &emsp; 
-                      </div>
-      
-                      <p>and paste it under</p>
-                      
-                      <div class="gedit">
-                        <center><div class="gedit-title">Bloco de Notas</div></center>
-                        &emsp; &lt;world name="default"><br>
-                        &emsp; 
-                      </div>
-      
-                      <h3 id="5--launch-the-world-file-in-gazebo-to-load-both-the-world-and-the-plugin">5- Launch the world file in Gazebo to load both the world and the plugin</h3>
-                      
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ cd /home/workspace/myrobot/world/ <br>                  
-                        &emsp;$ gazebo myworld     <br>                               
-                        &emsp;
-                      </div>
-
-                      <h3 id="6--visualize-the-output">6- Visualize the output</h3>
+                      </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h3></h3>
+                    <div>
+                      <h2 id="project-aspects">Project Aspects</h2>
+                      <p>Inside the Gazebo world you can identify:  </p>
                       <ul>
-                        <li>A <kbd>Hello World!</kbd> message is printed in the terminal. This message interacts with the Gazebo World that includes your two-wheeled robot.</li>
+                        <li><strong>Udacity Office</strong>: A building model designed on the Building Editor tool of Gazebo. The structure contains features, and colors.  </li>
+                        <li><strong>Green humanoid robot</strong>: Two instances of a model designed on the Model Editor tool of Gazebo. </li>
+                        <li><strong>Tables</strong>: A model imported from the Gazebo online library.</li>
+                        <li><strong>Terminal</strong>: A welcome message generated from a world plugin and printed to the terminal. </li>
                       </ul>
-                      <h2 id="troubleshooting">Troubleshooting</h2>
-                      <p>In case your plugins failed to load, you'll have to check and troubleshoot your error. The best way to troubleshoot errors with Gazebo is to launch it with the verbose as such:</p>
-                      
-                      <div class="terminal">
-                        <center><div class="title-terminal">Terminal</div></center>
-                        &emsp;<span class="user-terminal">gio@giovane</span>:<span class="caracter-terminal">~</span>
-                        &emsp;$ gazebo myworld --verbose<br>                                              
-                        &emsp;
-                      </div>
-
-                      <h2 id="github-repo">GitHub Repo</h2>
-                      <p>I hope you followed along with these instructions, built your first model in Gazebo, included in an empty world, and interacted with the world through a World Plugin. You can always clone this lab from GitHub by clicking <a href="https://github.com/udacity/RoboND-myrobot" rel="noopener noreferrer" target="_blank">here</a>. Follow the instructions in the Readme file to launch the world.  </p>
+                      <h2 id="directory-structure">Directory Structure</h2>
+                      <p>The sample simulation world folder has the following directory structure:</p>
+                      <pre><code>    .Project1                          # Build My World Project 
+                      ├── model                          # Model files 
+                      │   ├── Building
+                      │   │   ├── model.config
+                      │   │   ├── model.sdf
+                      │   ├── HumanoidRobot
+                      │   │   ├── model.config
+                      │   │   ├── model.sdf
+                      ├── script                         # Gazebo World plugin C++ script      
+                      │   ├── welcome_message.cpp
+                      ├── world                          # Gazebo main World containing models 
+                      │   ├── UdacityOffice.world
+                      ├── CMakeLists.txt                 # Link libraries 
+                      └──                              </code></pre>
+                      <h2 id="your-task">Your task</h2>
+                      <p>Note that your project should have the same aspects and should follow the same directory structure as the sample project! Pick a place where you want to deploy your robot, for example: your apartment, your office, or your favorite restaurant. In addition, create any model of your choice and import a model from the Gazebo library.  </p>
                     </div>
                   </div>
                   <div class="divider"></div>
                 </div>
-      
+          
                 <div class="col-12">
                   <p class="text-right">
-                    <a href="08.Exploring the Building Editor.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+                    <a href="03. Gazebo in the Workspace.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
                   </p>
                 </div>
               </div>
             </main>
+          
           </div>
+
           <!-- footer content -->
           <section class="contact-area" id="contact">
             <div class="container">
@@ -328,6 +251,7 @@
           <!-- /footer content -->
         </div>
         <!-- /page content -->
+
       </div>
     </div>
 
