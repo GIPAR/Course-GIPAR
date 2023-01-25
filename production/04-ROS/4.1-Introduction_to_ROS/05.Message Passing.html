@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/explorador.png" type="image/ico" />
+
+    <!-- Bootstrap -->
+    <link href="../../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  
+    <!-- bootstrap-progressbar -->
+    <link href="../../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../../../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../../../build/css/custom.min.css" rel="stylesheet">
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="../../css/new_style.css">
+
+    <title>4.1.5 Message Passing</title>
+    
+    <style>
+      p, #gazebo-basics-lesson-roadmap, li {
+        color: black;
+      }
+    </style>
+    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="../../index.html" class="site_title">
+                <!-- <i class="fa fa-paw"></i>  -->
+                <span>Course</span>
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <!-- <img src="images/img.jpg" alt="..." class="img-circle profile_img"> -->
+              </div>
+              <div class="profile_info">
+                <span>Welcome</span>
+                <!-- <h2>John Doe</h2> -->
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Chapters</h3>
+                <ul class="nav side-menu">
+                  <li><a><b>4.1 - </b>Introduction to ROS <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="display: block;">
+                      <li><a href="01.Welcome to ROS Essentials.html"><b>4.1.1 - </b>Welcome to ROS Essentials</a>
+                      </li>
+                      <li><a href="02.Build Robots with ROS.html"><b>4.1.2 - </b>Build Robots with ROS</a>
+                      </li>
+                      <li><a href="03.Brief History of ROS.html"><b>4.1.3 - </b>Brief History of ROS</a>
+                      </li>
+                      <li><a href="04.Nodes and Topics.html"><b>4.1.4 - </b>Nodes and Topics</a>
+                      </li>
+                      <li><a href="05.Message Passing.html"><b>4.1.5 - </b>Message Passing</a>
+                      </li>
+                      <li><a href="06.Services.html"><b>4.1.6 - </b>Services</a>
+                      </li>
+                      <li><a href="07.Compute Graph.html"><b>4.1.7 - </b>Compute Graph</a>
+                      </li>
+                      <li><a href="08.Turtlesim Overview.html"><b>4.1.8 - </b>Turtlesim Overview</a>
+                      </li>
+                      <li><a href="09.ROS in the Udacity Workspace.html"><b>4.1.9 - </b>ROS in the Udacity Workspace</a>
+                      </li>
+                      <li><a href="10.Source the ROS Environment.html"><b>4.1.10 - </b>Source the ROS Environment</a>
+                      </li>
+                      <li><a href="11.Run Turtlesim.html"><b>4.1.11 - </b>Run Turtlesim</a>
+                      </li>
+                      <li><a href="12.Turtlesim Comms List Nodes.html"><b>4.1.12 - </b>Turtlesim Comms: List Nodes</a>
+                      </li>
+                      <li><a href="13.Turtlesim Comms List Topics.html"><b>4.1.13 - </b>Turtlesim Comms: List Topics</a>
+                      </li>
+                      <li><a href="14.Turtlesim Comms Get Topic Info.html"><b>4.1.14 - </b>Turtlesim Comms: Get Topic Info</a>
+                      </li>
+                      <li><a href="15.Turtlesim Comms Message Information.html"><b>4.1.15 - </b>Turtlesim Comms: Message Information</a>
+                      </li>
+                      <li><a href="16.Turtlesim Comms Echo a Topic.html"><b>4.1.16 - </b>Turtlesim Comms: Echo a Topic</a>
+                      </li>
+                      <li><a href="17.Recap.html"><b>4.1.17 - </b>Recap</a>
+                      </li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+            </div>
+            <center>
+              <a href="../../index.html" target="_blank"><button type="button" class="btn btn-outline-warning">Home</button></a> 
+            </center>
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>               
+            </div>
+            <nav class="nav navbar-nav">                
+              <ul class=" navbar-right">
+                <center>
+                  <h4>05. Introduction to ROS</h4>
+                </center> 
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div id="content">
+            <header class="container-fluild header">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="align-items-middle">
+                      <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+      
+            <main class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="ud-atom">
+                    <h3></h3>
+                    <div>
+                      <h1 id="message-passing">Message Passing</h1>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h3><p>Message Passing </p></h3>
+                    <iframe width="1050" height="700" frameborder="0" 
+                      src="https://mega.nz/embed/mZUEAC6L#Ykq1VB8zmtXFmjPK0M0V_6_HDlSJcYpqxYpk2AONrog" 
+                      allowfullscreen >
+                    </iframe>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="ud-atom">
+                    <h3><p>Message Passing</p></h3>
+                    <div>
+                      <form>
+                        <fieldset>
+                          <legend><p>Which of the following statements about ROS messages are correct?</p></legend>
+                        </fieldset>
+      
+                        <div>
+                          <input type="checkbox" value="rbk1" name="778014" id="rbk1">
+                          <label for="rbk1"><p>Messages are used to pass only text based content between nodes.</p></label>
+                        </div>
+                        <div>
+                          <input type="checkbox" value="rbk2" name="778014" id="rbk2">
+                          <label for="rbk2"><p>Your ROS distribution will typically have just one predefined message type.</p></label>
+                        </div>
+                        <div>
+                          <input type="checkbox" value="rbk3" name="778014" id="rbk3">
+                          <label for="rbk3"><p>Messages come in hundreds of different types and may contain many different types of data.</p></label>
+                        </div>
+                        <div>
+                          <input type="checkbox" value="rbk4" name="778014" id="rbk4">
+                          <label for="rbk4"><p>In addition to default message types, you can define your own custom message types.</p></label>
+                        </div>
+                      </form>
+      
+                      <details>
+                        <summary><strong>SOLUTION:</strong></summary>
+                        <ul>
+                          <li>Messages come in hundreds of different types and may contain many different types of data.</li>
+                          <li>In addition to default message types, you can define your own custom message types.</li>
+                        </ul>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                </div>
+      
+                <div class="col-12">
+                  <p class="text-right">
+                    <a href="06.Services.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+                  </p>
+                </div>
+              </div>
+            </main>
+                       
+          </div>
+
+          <!-- footer content -->
+          <section class="contact-area" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="contact-content text-center">
+                            <a href=""><img src="https://gipar.ifba.edu.br/wp-content/uploads/2022/02/logo-GIPAR-2-e1643985541240-1536x572.png" alt="logo" style="width: 150px;"></a>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p> -->
+                            <div class="hr"></div>
+                            <!-- <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6> -->
+                            <!-- <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6> -->
+                            <div class="contact-social">
+                              <ul class="contacts_footer">
+                                <li><a class="hover-target" href="https://gipar.ifba.edu.br/"target="_blank">               <i class="fa fa-laptop"></i></a></li>
+                                <li><a class="hover-target" href="https://www.instagram.com/giparvca/" target="_blank">     <i class="fa fa-instagram"></i></a></li>
+                                <li><a class="hover-target" href="https://www.youtube.com/@gipar-ifba3478"target="_blank">  <i class="fa fa-youtube"></i></a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+              <hr style="background-color: rgb(151, 146, 146);">
+              <center>
+                <span>Copyright &copy; 2023 GIPAR All Rights Reserved.</span>
+              </center>
+              <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib &emsp;</a>
+              </div>
+            </div>
+          </section>
+          <!-- /footer content -->
+        </div>
+        <!-- /page content -->
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../../../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../../../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../../../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../../../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../../../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../../../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../../../build/js/custom.min.js"></script>
+  
+  </body>
+</html>
+    
+
+ 
+
